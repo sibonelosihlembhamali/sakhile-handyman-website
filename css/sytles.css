@@ -408,3 +408,47 @@ body {
 .sticky .section-hero {
   margin-top: 9.6rem;
 }
+
+/* ************************** */
+/* FOOTER
+/* *************************** */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 1em 6.2em 0 6.2em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  max-width: 120rem;
+}
+
+.slide {
+  display: none;
+}
+
+.snackbars {
+  padding: 9px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  text-align: left;
+  background-color: #323337;
+  border-radius: 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+}

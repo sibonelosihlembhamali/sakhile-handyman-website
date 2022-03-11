@@ -17,6 +17,7 @@
     ></script>
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/core.min.js"></script>
 
     <title>Handyman services &mdash; Do you need a hand.y man?</title>
   </head>
@@ -276,6 +277,129 @@
           </div>
          </section>
          <!-- 
+           ****************************************************************
+
+           LIGHTBOX
+
+           ***************************************************************
+          -->
+         <section>
+           <div id="lightbox" class="modal">
+             <span class="close pointer" onclick="closeLightbox()">&times;</span>
+             <div class="modal-content">
+               <div class="slide">
+                 <img 
+                  src="img/gallery/gallery1.png" 
+                  alt="Handyman: Television mounted to the wall with a tv stand below it" 
+                  height="300px" 
+                  class="modal-preview"
+                />
+               </div>
+               <div class="slide">
+                <img 
+                  src="img/gallery/gallery2.png" 
+                  alt="Handyman: Television mounted on the wall, with a tv stand underneath it, with a couch facing it."
+                  height="300px"
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery3.jpg" 
+                  alt="Handyman: industrial uranials installation" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery4.jpg" 
+                  alt="Handyman: bathroom basin installation with a cupboard undernearth" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery5.jpeg" 
+                  alt="Handyman: Wall with pictures and a cupboard underneath it" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery6.jpg" 
+                  alt="Handyman: beautifully installed bathroom" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery7.jpg" 
+                  alt="Handyman: bathroom mirror with basin and toilet underneath" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery8.jpeg" 
+                  alt="Handyman: Television mounted on the wall with sound bar underneath also mounted on the wall, all with tv stand underneath it." 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery9.jpg" 
+                  alt="Handyman: Plumbing, basin installed beautifully" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery10.jpg" 
+                  alt="Handyman: Beautiful living room wall with cupboard underneath" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery11.jpg" 
+                  alt="Living room with a television on an L-shaped background" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery12.jpeg" 
+                  alt="Handyman: Dining room table with chairs and a beautifully decorated wall." 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery13.jpg" 
+                  alt="Handyman: Kichen with gas stove, with kichen sink opposite" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery14.jpg" 
+                  alt="Handyman: Beautifully installed bathroom with mirror, basin and bathtub" 
+                  height="300px" 
+                />
+              </div>
+              <div class="slide">
+                <img 
+                  src="img/gallery/gallery15.jpg" 
+                  alt="Handyman: Painting, beautifully painted bedroom" 
+                  height="300px" 
+                />
+              </div>
+
+              <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+              <a class="next" onclick="changeSlide(1)">&#10095;</a>
+             </div>
+           </div>
+         </section>
+         <!-- 
           ******************************************************************
 
           QUOTE
@@ -296,22 +420,22 @@
                    current situation that requires
                    some of our services &amp; we'll be sure to be in touch
                  </p>
-                 <form class="cta-form" action="#">
+                 <form class="cta-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                    <div>
-                     <label for="full-name">Full Name</label>
-                     <input id="full-name" type="text" placeholder="John Smith" required />
+                     <label for="contact-name">Full Name</label>
+                     <input name="name" id="contact-name" type="text" placeholder="John Smith" required />
                    </div>
                    <div>
-                     <label for="contact-number">Contact Number</label>
-                     <input id="contact-number" type="tel" placeholder="082 111 1111" />
+                     <label for="contact-phone">Contact Number</label>
+                     <input name="phone" id="contact-phone" type="tel" placeholder="082 111 1111" />
                    </div>
                    <div>
-                     <label for="email">Email address</label>
-                     <input id="email" type="email" placeholder="me@example.com" />
+                     <label for="contact-email">Email address</label>
+                     <input name="email" id="contact-email" type="email" placeholder="me@example.com" />
                    </div>
                    <div>
                      <label for="select-service">Tell us how we can help</label>
-                     <select id="select-service" required>
+                     <select type="text" name="message" id="select-service" required>
                        <option value="">Please choose one:</option>
                        <option value="plumbing">Plumbing</option>
                        <option value="renovations">Renovations</option>
@@ -325,7 +449,7 @@
                        <option value="maintenance">Maintenance&#47;Repairs&#47;Other</option>
                      </select>
                    </div>
-                   <button class="btn btn--form">Get a quote</button>
+                   <button class="btn btn--form" type="submit">Get a quote</button>
                  </form>
                </div>
                <div 
@@ -375,5 +499,9 @@
          </div>
        </div>
      </footer>
+
+     <div class="snackbars" id="form-output-global"></div>
+     <script src="js/core.min.js"></script>
+     <script src="js/script.js"></script>
   </body>
 </html>
