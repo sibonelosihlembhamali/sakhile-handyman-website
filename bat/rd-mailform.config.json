@@ -1,8 +1,8 @@
 {
-  "useSmtp": true,
+  "useSmtp": false,
   "host": "serv19.registerdomain.co.za",
   "port": 465,
   "username": "info@sakxhandyman.co.za",
-  "password": "EsXa3J;os~CX",
-  "recipientEmail": "info@sakxhandymanservices.co.za"
+  "password": "iUr9NUPS2BCtfNC",
+  "recipientEmail": "info@sakxhandyman.co.za"
 }
