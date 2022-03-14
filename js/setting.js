@@ -2,6 +2,13 @@ const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
+// Making the mobile navigation work
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
@@ -24,6 +31,11 @@ allLinks.forEach(function (link) {
       if (href !== "#" && href.startsWith("#")) {
         const sectionEl = document.querySelector(href);
         sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Close mobile navigation
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
       }
     }
   });
