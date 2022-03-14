@@ -174,9 +174,11 @@
   BELOW 544px (Phones)
 */
 @media (max-width: 34em) {
-  grid {
+  .grid {
     row-gap: 4.8rem;
+    column-gap: 2.4rem;
   }
+
   .grid--3-cols {
     grid-template-columns: 1fr;
   }
@@ -209,5 +211,13 @@
 
   .cta-text-box {
     padding: 3.2rem;
+  }
+
+  .grid--footer {
+    padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+  }
+
+  .copyright {
+    margin-top: 2rem;
   }
 }
